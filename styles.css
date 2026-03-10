@@ -1,0 +1,421 @@
+/* ========================================
+   NOBILEZZE CLUB — Coming Soon
+   Quiet, cold, authoritative luxury.
+   ======================================== */
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+  background: #0A0A0A;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Video Background --- */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* --- Page Layout --- */
+.page {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  height: 100dvh;
+  padding: 48px 24px 36px;
+}
+
+/* --- Brand Header --- */
+.brand-header {
+  text-align: center;
+  z-index: 10;
+}
+
+.logo-link {
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.brand-logo {
+  height: 80px;
+  /* Increased size for cleaner presence */
+  width: auto;
+  display: block;
+}
+
+/* --- Hero Block --- */
+.hero {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+}
+
+.eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+}
+
+.subline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #B4B4B4;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+/* --- Countdown --- */
+.countdown-block {
+  margin-top: 60px;
+  /* Increased space from headline for breathing room */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-timer {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+
+.countdown-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 1;
+  color: #FFFFFF;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-separator {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 1;
+  color: #FFFFFF;
+  opacity: 0.4;
+  padding: 0 6px;
+}
+
+.countdown-unit-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #B4B4B4;
+  margin-top: 8px;
+}
+
+/* --- CTA Buttons --- */
+.cta-group {
+  margin-top: 60px;
+  /* Increased space from countdown to buttons */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  /* Increased gap between primary button and text link */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  padding: 16px 40px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #FFFFFF;
+  color: #0A0A0A;
+}
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #B4B4B4;
+  cursor: pointer;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  padding: 8px 16px;
+}
+
+.btn-text:hover {
+  color: #FFFFFF;
+}
+
+.lock-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* --- Footer --- */
+.page-footer {
+  width: 100%;
+  flex-shrink: 0;
+  padding-top: 32px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav-link {
+  color: #B4B4B4;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-nav-link:hover {
+  color: #FFFFFF;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-link {
+  color: #B4B4B4;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.social-link:hover {
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ========================================
+   RESPONSIVE — Mobile
+   ======================================== */
+@media (max-width: 768px) {
+  .page {
+    padding: 36px 20px 28px;
+  }
+
+  .brand-logo {
+    height: 60px;
+  }
+
+  .footer-container {
+    gap: 24px;
+  }
+
+  .footer-nav {
+    gap: 16px;
+    padding: 0 10px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    margin-bottom: 16px;
+  }
+
+  .headline {
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+
+  .subline {
+    font-size: 13px;
+    max-width: 300px;
+  }
+
+  .countdown-block {
+    margin-top: 32px;
+  }
+
+  .countdown-number {
+    font-size: 36px;
+  }
+
+  .countdown-separator {
+    font-size: 36px;
+    padding: 0 3px;
+  }
+
+  .countdown-unit {
+    min-width: 48px;
+  }
+
+  .countdown-unit-label {
+    font-size: 9px;
+  }
+
+  .cta-group {
+    margin-top: 32px;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 14px 28px;
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 390px) {
+  .headline {
+    font-size: 30px;
+  }
+
+  .countdown-number {
+    font-size: 28px;
+  }
+
+  .countdown-separator {
+    font-size: 28px;
+  }
+
+  .countdown-unit {
+    min-width: 38px;
+  }
+
+  .btn {
+    padding: 13px 20px;
+    font-size: 9px;
+  }
+}
+
+/* --- Ultra-tall screens: tighten spacing --- */
+@media (max-height: 700px) {
+  .page {
+    padding: 28px 20px 20px;
+  }
+
+  .countdown-block {
+    margin-top: 28px;
+  }
+
+  .cta-group {
+    margin-top: 28px;
+  }
+
+  .headline {
+    font-size: 44px;
+  }
+
+  .countdown-number {
+    font-size: 40px;
+  }
+
+  .countdown-separator {
+    font-size: 40px;
+  }
+}

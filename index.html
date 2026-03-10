@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nobilezze Club — Coming Soon</title>
+  <meta name="description"
+    content="Prémium darabok, outlet áron — csak a klub tagjainak. Csatlakozz az exkluzív Nobilezze Club-hoz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Video Background -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source
+        src="https://wpmjustqzuavqgxoezdz.supabase.co/storage/v1/object/sign/nc-hero/nc-cs-0310_v2.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZjFmYTZkYi1jMzRjLTQ2YjMtODhiNy0yNTM2MGQzOWViMWMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJuYy1oZXJvL25jLWNzLTAzMTBfdjIubXA0IiwiaWF0IjoxNzczMTM5NTIxLCJleHAiOjE4MDQ2NzU1MjF9.ST4hIxpU05_Ts6UOYe7ekIX4-j0z-FVkIWJqE8eaVOs"
+        type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="page">
+
+    <!-- Top Brand -->
+    <header class="brand-header">
+      <a href="/" class="logo-link">
+        <img src="Branding/nc-logo-trans-white.svg" alt="Nobilezze Club Logo" class="brand-logo">
+      </a>
+    </header>
+
+    <!-- Hero Center Block -->
+    <main class="hero">
+      <p class="eyebrow">CURATED DROP NO. 01</p>
+      <h1 class="headline">A klub megnyitja kapuit.</h1>
+      <p class="subline">Prémium darabok, outlet áron — csak a klub tagjainak.</p>
+
+      <!-- Countdown -->
+      <div class="countdown-block">
+        <div class="countdown-timer" id="countdown">
+          <div class="countdown-unit">
+            <span class="countdown-number" id="days">14</span>
+            <span class="countdown-unit-label">NAP</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="hours">03</span>
+            <span class="countdown-unit-label">ÓRA</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="minutes">25</span>
+            <span class="countdown-unit-label">PERC</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="seconds">28</span>
+            <span class="countdown-unit-label">MP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="cta-group">
+        <a href="#" class="btn btn-primary" id="btn-early-access">FELIRATKOZOM AZ EARLY ACCESS-RE</a>
+        <a href="#" class="btn-text" id="btn-login">
+          <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          BELÉPÉS A SAJÁT FIÓKOMBA
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <a href="#" class="footer-nav-link">Impresszum</a>
+          <a href="#" class="footer-nav-link">ÁSZF</a>
+          <a href="#" class="footer-nav-link">Adatvédelem</a>
+          <a href="#" class="footer-nav-link">Visszatérítés</a>
+          <a href="#" class="footer-nav-link">Kapcsolat</a>
+        </nav>
+
+        <div class="social-icons">
+          <a href="#" class="social-link" id="social-instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="#" class="social-link" id="social-tiktok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Countdown Timer — targets 14 days from now
+    (function () {
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 14);
+      targetDate.setHours(targetDate.getHours() + 3);
+      targetDate.setMinutes(targetDate.getMinutes() + 25);
+      targetDate.setSeconds(targetDate.getSeconds() + 28);
+
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+
+      function pad(n) {
+        return String(n).padStart(2, '0');
+      }
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        daysEl.textContent = pad(d);
+        hoursEl.textContent = pad(h);
+        minutesEl.textContent = pad(m);
+        secondsEl.textContent = pad(s);
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    })();
+  </script>
+
+</body>
+
+</html>
